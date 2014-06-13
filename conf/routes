@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+POST          /redis/users/signup          controllers.RedisController.signup()
+POST          /redis/users/login           controllers.RedisController.login()
+PUT           /redis/users/password        controllers.RedisController.changePassword()
+PUT           /redis/users                 controllers.RedisController.update()
+DELETE        /redis/users/:token          controllers.RedisController.delete(token: String)
+
+POST          /mongodb/users/signup          controllers.MongoDBController.signup()
+POST          /mongodb/users/login           controllers.MongoDBController.login()
+PUT           /mongodb/users/password        controllers.MongoDBController.changePassword()
+PUT           /mongodb/users                 controllers.MongoDBController.update()
+DELETE        /mongodb/users/:token          controllers.MongoDBController.delete(token: String)
+
+# Map static resources from the /public folder to the /assets URL path
+GET           /assets/*file                controllers.Assets.at(path="/public", file)
