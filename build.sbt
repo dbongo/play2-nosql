@@ -10,4 +10,6 @@ libraryDependencies ++= Seq(
   cache
 )     
 
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.2.3")
+
 play.Project.playJavaSettings
